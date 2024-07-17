@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const projects = [
-        { title: 'Project One', description: 'This is the description for project one.' },
-        { title: 'Project Two', description: 'This is the description for project two.' },
-        { title: 'Project Three', description: 'This is the description for project three.' },
+        { title: 'Chat-bot', description: 'This is the description for project one.' },
+        { title: 'BankApplication', description: 'This is the description for project two.' },
+        { title: 'TicTacToe', description: 'This is the description for project three.' },
     ];
 
     const projectList = document.querySelector('.project-list');
