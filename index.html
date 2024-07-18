@@ -17,31 +17,42 @@
         </ul>
     </nav>
 </header>
+
 <section id="about">
     <h2>About Me</h2>
-    <p>Hello! I'm a Software Engineer with experience in creating dynamic web applications.</p>
+    <p>Hello! I'm [Your Name], a passionate developer with expertise in [Your Skills].</p>
 </section>
+
 <section id="projects">
     <h2>Projects</h2>
-    <div class="project-list">
-        <!-- Projects will be dynamically loaded here -->
+    <div class="project" onclick="showProjectDetails('project1')">
+        <h3>Project 1</h3>
+        <p>Short description of Project 1.</p>
     </div>
+    <div class="project" onclick="showProjectDetails('project2')">
+        <h3>Project 2</h3>
+        <p>Short description of Project 2.</p>
+    </div>
+    <!-- Add more projects as needed -->
 </section>
+
 <section id="contact">
     <h2>Contact</h2>
-    <form id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit">Send</button>
-    </form>
+    <p>Feel free to reach out to me at <a href="mailto:your-email@example.com">your-email@example.com</a>.</p>
 </section>
+
+<div id="project-details" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeProjectDetails()">&times;</span>
+        <h2 id="project-title">Project Title</h2>
+        <p id="project-description">Project description will go here.</p>
+    </div>
+</div>
+
 <footer>
-    <p>&copy; 2024 My Portfolio</p>
+    <p>&copy; 2024 [Your Name]. All rights reserved.</p>
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>

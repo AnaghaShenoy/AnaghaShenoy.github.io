@@ -1,31 +1,20 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const projects = [
-        { title: 'Chat-bot', description: 'This is the description for project one.' },
-        { title: 'BankApplication', description: 'This is the description for project two.' },
-        { title: 'TicTacToe', description: 'This is the description for project three.' },
-    ];
+function showProjectDetails(projectId) {
+    let title, description;
 
-    const projectList = document.querySelector('.project-list');
+    if (projectId === 'project1') {
+        title = 'Project 1';
+        description = 'Detailed description of Project 1.';
+    } else if (projectId === 'project2') {
+        title = 'Project 2';
+        description = 'Detailed description of Project 2.';
+    }
 
-    projects.forEach(project => {
-        const projectDiv = document.createElement('div');
-        projectDiv.classList.add('project');
+    document.getElementById('project-title').textContent = title;
+    document.getElementById('project-description').textContent = description;
 
-        const projectTitle = document.createElement('h3');
-        projectTitle.textContent = project.title;
+    document.getElementById('project-details').style.display = 'block';
+}
 
-        const projectDescription = document.createElement('p');
-        projectDescription.textContent = project.description;
-
-        projectDiv.appendChild(projectTitle);
-        projectDiv.appendChild(projectDescription);
-
-        projectList.appendChild(projectDiv);
-    });
-
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Message sent! Thank you for contacting me.');
-        this.reset();
-    });
-});
+function closeProjectDetails() {
+    document.getElementById('project-details').style.display = 'none';
+}
